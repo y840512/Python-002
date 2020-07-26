@@ -17,5 +17,5 @@ class MaoyanmoviePipeline:
         my_time = item['my_time']
         my_list = [{'电影名称':my_name, '电影类型':my_type, '上映时间':my_time}]
         movie2 = pd.DataFrame(data = my_list)
-        movie2.to_csv('movie2.csv',mode = 'a', encoding='utf-8', index=False, header=True)
+        movie2.to_csv('movie2.csv',mode = 'a', encoding='utf-8', index=False, header=False)
         return item
