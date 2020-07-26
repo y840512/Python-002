@@ -1,0 +1,28 @@
+# 作业二：
+
+# 使用 Scrapy 框架和 XPath 抓取猫眼电影的前 10 个电影名称、电影类型和上映时间，并以 UTF-8 字符集保存到 csv 格式的文件中。
+
+# 猫眼电影网址： https://maoyan.com/films?showType=3
+
+# 要求：必须使用 Scrapy 框架及其自带的 item pipeline、选择器功能，
+# 不允许使用 bs4 进行页面内容的筛选。
+
+
+# Scrapy爬虫初步
+
+# 安装步骤：
+# 1 pip install scrapy
+# 2 scrapy startproject maoyanmovie
+    # New Scrapy project 'maoyanmovie', using template directory '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scrapy/templates/project', created in:
+    #     /Users/bingley/edu/geekpython/Python-002/week01/task2/maoyanmovie
+
+    # You can start your first spider with:
+    #     cd maoyanmovie
+    #     scrapy genspider example example.com
+    # scrapy genspider maoyan maoyan.com
+        # Created spider 'maoyan' using template 'basic' in module:
+        # maoyanmovie.spiders.maoyan
+
+
+# 3 cd ./doubanmovie/doubanmovie/spiders
+# 4 scrapy genspider maoyan maoyan.com
