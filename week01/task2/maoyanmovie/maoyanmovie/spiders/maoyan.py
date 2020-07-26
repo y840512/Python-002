@@ -3,8 +3,6 @@ import scrapy
 import lxml.etree
 from maoyanmovie.items import MaoyanmovieItem
 from scrapy.selector import Selector
-from pathlib import Path
-import os
 
 
 
