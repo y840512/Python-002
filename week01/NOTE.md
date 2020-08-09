@@ -21,7 +21,7 @@ maoyan.py
 
 pip install scrapy
 scrapy startproject maoyanmovie
-cd ./doubanmovie/doubanmovie/spiders
+cd ./maoyanmovie/maoyanmovie/spiders
 scrapy genspider maoyan maoyan.com
 
 运行
