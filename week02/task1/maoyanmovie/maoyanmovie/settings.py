@@ -9,6 +9,15 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+
+MYSQL_CONFIG = {
+   'host': 'localhost',
+   'port': 3306,
+   'user': 'root',
+   'password': 'root',
+   'db': 'test'
+}
+
 BOT_NAME = 'maoyanmovie'
 
 SPIDER_MODULES = ['maoyanmovie.spiders']
@@ -28,7 +37,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -56,6 +65,17 @@ ROBOTSTXT_OBEY = True
 #DOWNLOADER_MIDDLEWARES = {
 #    'maoyanmovie.middlewares.MaoyanmovieDownloaderMiddleware': 543,
 #}
+
+DOWNLOADER_MIDDLEWARES = {
+   'maoyanmovie.middlewares.MaoyanmovieDownloaderMiddleware': 543,
+   'maoyan.middlewares.HttpProxyMiddleware': 400
+}
+
+HTTP_PROXY_LIST = [
+   'http://101.4.136.34:81',
+   'http://110.243.13.15:9999',
+   'http://111.13.100.91:80',
+]
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html

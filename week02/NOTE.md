@@ -12,9 +12,11 @@
 使用 requests 或 Selenium 模拟登录石墨文档 https://shimo.im
 
 
-https://github.com/Python-002/Python-002/issues/1
-https://github.com/Python-002/Python-002/issues/11
-https://github.com/dingjimei/Python-002/tree/master/week02/task2.1/maoyanspider
 
 create database test default character set utf8mb4 collate utf8mb4_unicode_ci;
 create table movie_info(movie_name varchar(100),actor varchar(50),time date);
+
+
+week02 
+本周作业拖延了一周了，task1 还是没有调通，麻烦老师帮忙看看。感觉知识点还是掌握的不够清晰。
+Selenium 跳转的现在明白了。

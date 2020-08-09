@@ -1,12 +1,12 @@
 import pymysql
-# from twisted.enterprise import adbapi
+from twisted.enterprise import adbapi
 import time
 
 dbInfo = {
     'host' : 'localhost',
     'port' : 3306,
     'user' : 'root',
-    'password' : 'root',
+    'password' : 'rootroot',
     'db' : 'test'
 }
 
@@ -21,11 +21,11 @@ class DBHelper():
         self.user = dbInfo['user']
         self.password = dbInfo['password']
         self.db = dbInfo['db']
-        # self.sqls = dbInfo['sqls']
+        self.sqls = sqls
 
 
     def insert(self, item):
-        # sqls = "insert into movie_info(movie_name,actor,time) values(%s,%s,%s,%s)"
+        sqls[0] = "insert into tech_courses(movie_name,actor,time) values('%s','%s','%s')" % (item[0],item[1],item[2])
         conn = pymysql.connect(
             host = self.host,
             port = self.port,
@@ -33,7 +33,7 @@ class DBHelper():
             password = self.password,
             db = self.db
         )
-        # 游标建立的时候就开启了一个隐形的事务
+        # 游标建立的时候就开启了一个隐形的事物
         cur = conn.cursor()
         try:
             for command in self.sqls:
