@@ -26,3 +26,6 @@
 9. DELETE FROM table1 WHERE id=10;
  
 10. ALTER TABLE table1 DROP COLUMN column_name;
+
+
+这两周没时间学习，copy了别的同学的作业学习。
